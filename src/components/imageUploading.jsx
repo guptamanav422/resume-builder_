@@ -55,7 +55,7 @@ let ImageUploading = () => {
           <input type="file" name="myImage" onChange={onImageChange} className="bg-dark" style={{textAlign:"center", color:"white"}} />
         <button
             onClick={() => {
-              history.push("/personal");
+              history.push("/socialHandle");
             }}
             className="btn btn-primary m-5"
           >

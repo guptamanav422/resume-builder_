@@ -120,7 +120,7 @@ let PersonalData = () => {
           </button>
           <button
             onClick={() => {
-              history.push("/userImg");
+              history.push("/socialHandle");
             }}
             className="btn btn-primary m-4"
           >

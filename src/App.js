@@ -14,6 +14,8 @@ import { userCreator } from "./redux/actions/userActions";
 import ImageUploading from "./components/imageUploading"
 import EducationInfo from "./components/educationInfo"
 import Resume from "./components/resume"
+import SocialHandle from "./components/socialHandle"
+
 let App = () => {
   let dispatch = useDispatch();
 
@@ -49,6 +51,9 @@ let App = () => {
           </Route>
           <Route path="/educationInfo">
             <EducationInfo/>
+          </Route>
+          <Route path="/socialHandle">
+            <SocialHandle/>
           </Route>
           <Route path="/resume">
             <Resume/>
