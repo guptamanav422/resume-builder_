@@ -1,13 +1,13 @@
 import { useSelector} from "react-redux";
 import "./css/preview.css";
-import A from "./templates/A"
+import A from "./A"
 let Preview = (props) => {
     useSelector((state) => state.details);
 
-  let templateCode = useSelector((state) => state.template);
+  // let templateCode = useSelector((state) => state.template);
   return (
     <>
-       {templateCode==="A"? <A />:""}
+       <A />
     </>
   );
 };

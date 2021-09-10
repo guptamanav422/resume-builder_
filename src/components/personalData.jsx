@@ -7,7 +7,7 @@ import AboutUi from "./aboutUi"
 let PersonalData = () => {
   let details = useSelector((state) => state.details);
 
-  let { tech, email, phone, city, state, age,birthday,description } = details;
+  let { tech, email, phone, city, state, age,birthday,description ,degree} = details;
 
   let history = useHistory();
 

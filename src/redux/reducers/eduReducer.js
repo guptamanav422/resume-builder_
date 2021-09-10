@@ -6,7 +6,7 @@ let details={
     schoolName12:"",
     schoolMarks12:"",
     CollegeName:"",
-    Degree:"",
+    degree:"",
     collegeMarks:"",
     skills:"",
     currCompany:"",

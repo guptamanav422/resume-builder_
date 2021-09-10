@@ -58,7 +58,8 @@ let ResumeUi = () => {
                     })
                   }
                 </ul>
-                {
+              </div>
+              {
                   (professionalExperience.position !== "") ?
                     <div> <h3 class="resume-title"> Professional Experience</h3>
                       <div class="resume-item">
@@ -76,7 +77,6 @@ let ResumeUi = () => {
                       </div>
                     </div> : ""
                 }
-              </div>
             </div>
 
           </div>

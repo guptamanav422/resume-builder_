@@ -20,7 +20,7 @@ export const saveCompletedCreator = (id) => {
   };
 };
 
-export const saveResume = (uid, details, code) => {
+export const saveResume = (uid, details, code,edudetails,img,social,resumeDetail) => {
   return (dispatch) => {
     dispatch(saveResumeCreator());
 
@@ -30,11 +30,16 @@ export const saveResume = (uid, details, code) => {
         uid,
         details,
         code,
+        edudetails,
+        img,
+        social,
+        resumeDetail,
       })
       .then((docRef) => {
         return docRef.get();
       })
       .then((doc) => {
+        // console.log(doc.id);
         dispatch(saveCompletedCreator(doc.id));
       })
       .catch((err) => {

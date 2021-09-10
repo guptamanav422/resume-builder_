@@ -15,7 +15,7 @@ import ImageUploading from "./components/imageUploading"
 import EducationInfo from "./components/educationInfo"
 import Resume from "./components/resume"
 import SocialHandle from "./components/socialHandle"
-
+import A from "./components/A"
 let App = () => {
   let dispatch = useDispatch();
 
@@ -54,6 +54,9 @@ let App = () => {
           </Route>
           <Route path="/socialHandle">
             <SocialHandle/>
+          </Route>
+          <Route path="/A">
+            <A/>
           </Route>
           <Route path="/resume">
             <Resume/>

@@ -7,7 +7,7 @@ import EducationUi from "./educationUi"
 let EducationInfo = () => {
   let edudetails = useSelector((state) => state.education);
 
-  let {schoolName10,schoolMarks10,schoolName12,schoolMarks12,CollegeName,Degree,collegeMarks,skills,currCompany,courseWork} = edudetails;
+  let {schoolName10,schoolMarks10,schoolName12,schoolMarks12,CollegeName,degree,collegeMarks,skills,currCompany,courseWork} = edudetails;
 
   let history = useHistory();
 
@@ -91,7 +91,7 @@ let EducationInfo = () => {
             
             <div class="col-5 mt-2">
               <input
-                value={Degree}
+                value={degree}
                 onChange={(e) => {
                   dispatch(eduCreator({ degree: e.currentTarget.value }));
                 }}
