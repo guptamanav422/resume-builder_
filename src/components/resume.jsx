@@ -287,7 +287,7 @@ let Resume = () => {
             </label>
             <button
               onClick={() => {
-                alert(`localhost:3000/publicpreview/${id}`);
+                alert(`https://resume-7258e.web.app/publicpreview/${id}`);
               }}
               className="btn col-4 btn-primary m-4"
             >
@@ -308,14 +308,6 @@ let Resume = () => {
               className="btn col-4 btn-primary m-4"
             >
               BACK
-            </button>
-            <button
-              onClick={() => {
-                history.push("/A");
-              }}
-              className="btn col-4 btn-primary m-4"
-            >
-              Next
             </button>
           </div>
         </div>
