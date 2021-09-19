@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKZyZtugIQ2aFLfPQ8iXIrcTf01Jh6IlM",
@@ -13,6 +14,11 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
+// export const r=firebase.storage();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+// Get a reference to the storage service, which is used to create references in your storage bucket
+var storage = firebase.storage();
+
+// Create a storage reference from our storage service
+export const r = storage.ref();

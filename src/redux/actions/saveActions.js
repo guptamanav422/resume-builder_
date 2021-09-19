@@ -20,10 +20,12 @@ export const saveCompletedCreator = (id) => {
   };
 };
 
+
+
 export const saveResume = (uid, details, code,edudetails,img,social,resumeDetail) => {
   return (dispatch) => {
     dispatch(saveResumeCreator());
-
+    console.log(uid);
     firestore
       .collection("resume")
       .add({
@@ -39,11 +41,29 @@ export const saveResume = (uid, details, code,edudetails,img,social,resumeDetail
         return docRef.get();
       })
       .then((doc) => {
-        // console.log(doc.id);
         dispatch(saveCompletedCreator(doc.id));
+          firestore
+          .collection("users")
+          .doc(uid)
+          .get()
+          .then((doc1) => {
+            let {arr,email} = doc1.data();
+            return {arr,email};
+          })
+          .then(({arr,email})=>{
+            arr.push(doc.id);
+            return {arr,email};
+          })
+          .then( async ({arr,email})=>{
+            let docRef = await firestore.collection("users").doc(uid);
+              docRef.set({
+                arr,
+                email
+              });
+          })
       })
       .catch((err) => {
         dispatch(saveErrCreator(err));
       });
-  };
 };
+}

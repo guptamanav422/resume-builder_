@@ -12,9 +12,9 @@ let Login = () => {
   return (
     <>
       {user ? <Redirect to="/home" /> : ""}
-      <div className="row">
+      <div className="row" style={{width:"100%"}}>
         <div className="col-4 offset-4">
-          <h1 className="mt-4 mb-4">Login</h1>
+          <h1 className="mt-4 mb-4" style={{color:"#bd5d38"}}>Login</h1>
           <form className="mt-4">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">

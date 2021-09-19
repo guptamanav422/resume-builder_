@@ -14,9 +14,9 @@ let SignUp = () => {
     <>
       {user ? <Redirect to="/home" /> : ""}
 
-      <div className="row">
+      <div className="row" style={{width:"100%"}}>
         <div className="col-4 offset-4">
-          <h1 className="mt-4 mb-4">Sign Up!</h1>
+          <h1 className="mt-4 mb-4"  style={{color:"#bd5d38"}}>Sign Up!</h1>
           <form className="mt-4">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">

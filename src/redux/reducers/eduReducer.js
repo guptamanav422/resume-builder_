@@ -8,7 +8,7 @@ let details={
     CollegeName:"",
     degree:"",
     collegeMarks:"",
-    skills:"",
+    skills:[],
     currCompany:"",
     courseWork:"",
 }
